@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>JavaScript Loop Practice Tasks</h1>
+    <script>
+        //Write a loop to print numbers from 1 to 20.
+
+        // for (let index = 0; index <=20; index++) {
+        //     console.log(index);   
+        // }
+        // //Take a number n from the user and find the sum of numbers from 1 to n.
+
+        // let number=10;
+
+        // for(let x=0;x<=number;x++){
+        //     console.log(x + number);
+        // }
+
+        // //Ask the user for a number and print its multiplication table (up to 10).
+        // for(let y=1;y<=10;y++){
+        //     console.log(number*y);
+        // }
+
+        // //Use a loop to print numbers from 50 down to 1.
+        // for(let a=50;a>0;a--){
+        //     console.log(a);
+        // }
+        //Write a program to calculate the factorial of a given number using a loop.
+        let n = 5;
+        let fact = 1;
+        for (let i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+        console.log(fact);
+
+
+
+
+
+
+        //Use a loop to print only even numbers between 1 and 30.
+
+        // for(let z=1;z<=30;z++){
+        //     if(z%2==1){
+        //         console.log(z);
+        //     }
+        // }
+
+        // //Take a string input and use a loop to print each character separately.
+        // let string="hello";
+        // for(let s=0;s<=string.length;s++){
+        //     let new_string=string.charAt(s);
+        //     console.log(new_string);
+        // }
+
+        //Ask the user for a number and use a loop to count how many digits it has.
+        let count = 4863266445243454;
+        let string1 = count.toString();
+        for (let j = 0; j <= string1.length; j++) {
+            let new_count = string1.length;
+            console.log(new_count);
+        }
+        //Write a loop to print the following pattern (for 5 rows):
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < i; j++) {
+                document.writeln("*");
+
+            }
+            document.writeln("<br>");
+
+        }
+
+        //Given an array of numbers, use a loop to calculate and print the total sum.
+        let array=[1,2,3,4,5];
+        for(let cal=0;cal<array.length;cal++){
+            let array2=array[cal];
+            console.log(array2+cal);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

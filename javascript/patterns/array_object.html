@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array and object task
+
+    </title>
+</head>
+
+<body>
+
+    <h1>Array and Object</h1>
+    <h2> Array - 10 Practical Tasks</h2>
+    <ol>
+    <li>Create an array of numbers and find the sum of all elements.</li>
+    <script>  let arr = [1, 2, 3, 4, 5];
+        console.log(arr[0] + arr[1] + arr[2] + arr[3] + arr[4]);</script>
+    <li>Find the maximum and minimum numbers from an array.</li>
+    <script> let arr2 = arr.sort();
+
+        console.log("minimum number:", arr2.slice(0, 1));
+        console.log("maximum number:", arr2.slice(4));</script>
+    <li>Reverse an array without using the built-in reverse() method.</li>
+    <script> console.log(arr.reverse());</script>
+    <li>Remove duplicate elements from an array.</li>
+    <script> let a = [2, 3, 4, 5, 2];
+        let b = a.sort();
+        console.log(b.splice(2));</script>
+    <li>Sort an array in ascending and descending order.</li>
+    <script> let c = [4, 3, 5, 6, 9]
+        console.log("ascending oder:", c.sort());
+        console.log("descending oder:", c.sort().reverse());</script>
+    <li>Merge two arrays and remove duplicates from the merged array.</li>
+    <script>  let array1 = [1, 2, 3, 4];
+        let array2 = [4, 5, 6, 7];
+        let array3 = array1.concat(array2);
+        console.log("merged array:", array3);
+        console.log("removed duplicate:", array3.slice(3, 5));</script>
+    <li>Count how many times a specific element appears in an array.</li>
+    <script> let count = [11, 22, 33, 44, 11, 55, 11];
+        let sort = count.sort();
+        console.log(sort);
+        console.log(sort.splice(0, 3));</script>
+    <li>Find the second largest element in an array.</li>
+    <script> console.log(sort.indexOf());</script>
+    <li>Check if all elements in an array are even numbers.</li>
+    <script> let even_number = [2, 6];
+        if (even_number % 2 == 0) {
+            console.log("yess all numbers are even");
+        }
+        else {
+            console.log("no all numbers are not even");
+
+        }</script>
+    <li>Rotate an array by n positions (e.g., shift elements left by 2).</li>
+    <script> let count22 = [11, 22, 33, 44, 11, 55, 11];
+        console.log(count22);
+        let count3 = count22.unshift(10, 22)
+        console.log(count3);
+        console.log(count22);
+</script>
+    </ol>
+
+    <h2> Object - 10 Practical Tasks</h2>
+    <ol>
+        <li>Create an object representing a student with name, age, and marks. Print all properties.</li>
+        <script> let student = {
+                name: "hardi",
+                age: 20,
+                marks: 98.99
+            };
+            console.log(student);
+
+        </script>
+        <li>Update the value of a property in an object.</li>
+        <script> student.age = 21;
+            console.log("upadte the age property :", student);
+            console.log("upadte the age property :", student.age);
+
+        </script>
+        <li>Delete a property from an object.</li>
+        <script> delete student.marks;
+            console.log(student);
+
+        </script>
+        <li>Count the number of properties in an object.</li>
+        <script> let count2 = Object.keys(student).length;
+            console.log("Number of properties:", count2);
+        </script>
+        <li>Write a function to check if a property exists in an object.</li>
+        <script>function hasProperty(obj, prop) {
+                return obj.hasOwnProperty(prop);
+            }
+            console.log(hasProperty(student, "name"));
+            console.log(hasProperty(student, "marks"));
+        </script>
+        <li>Convert an object into an array of keys and an array of values.</li>
+        <script>let person = { name: "srushti", age: 15, city: "junagadh" };
+            let keys = Object.keys(person);
+            let values = Object.values(person);
+            console.log("Keys:", keys);
+            console.log("Values:", values); 
+        </script>
+        <li>Merge two objects into a single object.</li>
+        <script> let obj1 = { a: 1, b: 2 };
+            let obj2 = { c: 3, d: 4 };
+            let merged = { ...obj1, ...obj2 };
+            // let merged = { { } + { obj1 } + { obj2 } };
+            console.log("Merged Object:", merged);
+            // console.log(obj1);
+            // console.log(obj2);
+
+
+        </script>
+        <li>Create an array of objects (students) and filter students with marks above 80.</li>
+        <script>let students = [
+                { name: "Hardi", marks: 75 },
+                { name: "Jenisha", marks: 90 },
+                { name: "Srushti", marks: 82 }
+            ];
+            let topStudents = students.filter(s => s.marks > 80);
+            console.log("Top Students:", topStudents);
+        </script>
+        <li>Sort an array of objects by a specific property (e.g., age).</li>
+        <script>let people = [
+                { name: "A", age: 30 },
+                { name: "B", age: 25 },
+                { name: "C", age: 35 }
+            ];
+            people.sort((a, b) => a.age - b.age);
+            console.log("Sorted by Age:", people);
+        </script>
+        <li>Find the object with the highest value for a given property (e.g., max salary from employee objects).</li>
+        <script>let employees = [
+                { name: "hardi", salary: 50000 },
+                { name: "jenisha", salary: 75000 },
+                { name: "srushti", salary: 60000 }
+            ];
+            let highest = employees.reduce((prev, curr) =>
+                curr.salary > prev.salary ? curr : prev
+            );
+            console.log("Highest Salary:", highest);
+
+        </script>
+    </ol>
+</body>
+
+</html>
