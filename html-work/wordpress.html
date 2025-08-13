@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1200px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .col-50 {
+            width: 50%;
+
+        }
+
+        .col-50 h2 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 20px 0;
+        }
+        .sec-one p{
+            text-transform: uppercase;
+            color: #9E6747;
+            margin-bottom: 35px;
+        }
+        .sec-one h1{
+            font-size: 30px;
+            margin-bottom: 35px;  
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .accordion {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .accordion-item {
+            background: #fff;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .accordion input {
+            display: none;
+        }
+
+        .accordion label {
+            display: block;
+            padding: 16px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            /* background: #333; */
+            color: black;
+        }
+
+        .accordion .content {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            background: #f1f1f1;
+            color: #333;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .accordion input:checked~.content {
+            max-height: 500px;
+            padding: 16px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-50 sec-one">
+                    <p>Your Furniture Questions, Answered Here</p>
+                    <h1>Answers to All Furniture Questions</h1>
+                    <div class="accordion">
+
+                        <div class="accordion-item">
+                            <input type="checkbox" id="faq1">
+                            <label for="faq1">1.Do You Offer Custom Furniture Designs?</label>
+                            <div class="content">
+                                <p>
+                                    Porta ad auctor cras ut dis nibh at. Et diam sollicitudin; bibendum nulla dui semper
+                                    natoque class.
+                                    Ac praesent phasellus, maecenas quisque per congue aenean justo. Dictum a fringilla
+                                    lobortis maximus sit class litora.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="accordion">
+
+                        <div class="accordion-item">
+                            <input type="checkbox" id="faq2">
+                            <label for="faq2">2.
+                                How Do I Care For My Furniture?</label>
+                            <div class="content">
+                                <p>
+                                    At tortor metus etiam tempus curabitur hac fusce. Aptent vulputate augue mus, at
+                                    accumsan odio pretium finibus viverra. Magnis tortor tincidunt urna velit quisque
+                                    sed litora. Scelerisque habitasse gravida dictum justo laoreet dui euismod aliquam.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="accordion">
+
+                        <div class="accordion-item">
+                            <input type="checkbox" id="faq3">
+                            <label for="faq3">
+                                3.
+                                What Is The Warranty On Your Furniture?</label>
+                            <div class="content">
+                                <p>
+                                    Sagittis leo morbi orci cubilia imperdiet consectetur. Nulla posuere massa purus ex
+                                    class curabitur cras varius. Non cubilia efficitur; nisi ac lectus rutrum. Eu sem
+                                    ligula vitae sit praesent. Mauris aliquam ad a ipsum, tempor nulla curae tortor.
+                                    Elementum nascetur adipiscing tellus; ligula suscipit ullamcorper dis. </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="accordion">
+
+                        <div class="accordion-item">
+                            <input type="checkbox" id="faq4">
+                            <label for="faq4">
+                                4.
+                                Do You Offer A Return Or Exchange Policy?</label>
+                            <div class="content">
+                                <p>
+                                    Etiam curabitur nascetur viverra massa suspendisse fames. Placerat rhoncus quam
+                                    molestie condimentum rutrum. Iaculis eros parturient ridiculus litora, convallis
+                                    pharetra cras aptent euismod. Tincidunt lacus sagittis tellus lacinia urna.
+                                    Porttitor velit aliquet cursus duis finibus at nunc.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="accordion">
+
+                        <div class="accordion-item">
+                            <input type="checkbox" id="faq5">
+                            <label for="faq5">
+                                5.
+                                Can I Order Furniture In A Specific Color Or Finish?</label>
+                            <div class="content">
+                                <p>
+                                    Pellentesque eu libero felis. Etiam posuere leo arcu, mollis tincidunt nulla
+                                    ultricies venenatis. Pellentesque habitant morbi tristique senectus et netus et
+                                    malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci
+                                    luctus et ultrices posuere cubilia curae.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="accordion">
+
+                        <div class="accordion-item">
+                            <input type="checkbox" id="faq6">
+                            <label for="faq6">
+                                6.
+                                How Long Does It Take To Process An Order?</label>
+                            <div class="content">
+                                <p>
+                                    Pellentesque eu libero felis. Etiam posuere leo arcu, mollis tincidunt nulla
+                                    ultricies venenatis. Pellentesque habitant morbi tristique senectus et netus et
+                                    malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci
+                                    luctus et ultrices posuere cubilia curae.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-50">
+                    <div class="row">
+                        <div class="col-50">
+                            <img src="./assets/img/logo.jpg" alt="">
+                        </div>
+                        <div class="col-50">
+                            <h2>How long the Warrenty Claimed?</h2>
+                            <p>Augue urna adipiscing mauris magnis ut. Interdum taciti ipsum tristique commodo ultrices
+                                hendrerit
+                                nibh viverra. Senectus feugiat habitasse erat hac nulla. Turpis nisl tempus sit tempus
+                                vitae
+                                convallis condimentum tellus.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-50">
+                            <h2>What are the available Payment Method?</h2>
+                            <p>Conubia hac porttitor nisl ultricies condimentum potenti, inceptos bibendum. Varius dolor
+                                etiam tincidunt cursus magna ligula sollicitudin luctus. Finibus volutpat fusce vivamus
+                                varius massa sit urna. Montes commodo.</p>
+                        </div>
+                        <div class="col-50">
+                            <img src="./assets/img/logo.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-50">
+                            <img src="./assets/img/logo.jpg" alt="">
+                        </div>
+                        <div class="col-50">
+                            <h2>What is the minimum order for Free Delivery?</h2>
+                            <p>Augue curabitur montes sollicitudin fames facilisi urna risus dis. Bibendum lobortis nec
+                                nullam hac dapibus. Natoque at pellentesque auctor donec turpis ad felis. Hendrerit
+                                massa odio torquent, semper suscipit malesuada fringilla.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

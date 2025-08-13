@@ -63,6 +63,27 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
 }
+/* Navbar links reset */
+.navbar li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #0a2a55;   /* initial text color (dark blue text) */
+  padding: 8px 16px;
+  border-radius: 6px; /* rounded corners */
+  transition: all 0.3s ease; /* smooth animation */
+  font-weight: 500;
+}
+
+/* Hover effect */
+.navbar li a:hover {
+  background-color: #0a2a55; /* dark blue */
+  color: #fff;               /* white text */
+}
+
 /*--------------------------------------------------------- navbar------------------------------------- */
 /*--------------------------------------------------------- hero-section------------------------------------ */
 .hero{
@@ -85,12 +106,28 @@ body {
     font-size: 20px;
     padding: 20px 0;
 }
-.elevate_button{
+/* .elevate_button{
     background-color:rgb(12, 12, 94);
     color: white;
     padding: 15px;
     font-weight: 600;
     margin:20px 0px ;
+} */
+.elevate_button{
+  margin-top:16px;
+  background:var(--blue);
+  color:#4b4949;
+  border:none;
+  padding:12px 18px;
+  /* border-radius:12px; */
+  font-weight:700;
+  cursor:pointer;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.elevate_button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 24px rgba(10,42,85,.25);
+  color: white;
 }
 .slider_chaotic {
     background-color:rgb(9, 9, 75);
@@ -117,7 +154,34 @@ body {
 .col-40 img:hover {
   transform: scale(1.2); /* zoom in */
 }
-
+/* Marquee */
+.marquee-wrap{
+  overflow:hidden;
+  border-top:1px solid #e5e7eb;
+  border-bottom:1px solid #e5e7eb;
+  margin-top:32px;
+  /* background:#f8fafc; */
+}
+.marquee{
+  display:flex;
+  /* gap:64px; */
+  padding:12px 0;
+  white-space:nowrap;
+  animation: marquee 22s linear infinite;
+  font-weight:600;
+  color:var(--blue);
+}
+.marquee span{ background-color:rgb(9, 9, 75);
+    color: white;
+    padding: 19px 0;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: serif; 
+  padding-right: 20px;}
+/* @keyframes marquee{
+  from{ transform: translateX(0) }
+  to{ transform: translateX(-50%) }
+} */
 /*--------------------------------------------------------- hero-section------------------------------------- */
 /*--------------------------------------------------------- section-02 start------------------------------------- */
 .sec-2 h2{
@@ -314,6 +378,20 @@ body {
     .cans-section:hover .text {
       opacity: 1;
     }
+    /* -------- */
+    .text span {
+  opacity: 0;
+  display: inline-block;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+}
+
+.text span.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+    /* -------- */
 /*--------------------------------------------------------- section-05 end------------------------------------- */
 /*--------------------------------------------------------- section-06 start------------------------------------- */
 .faq-section {

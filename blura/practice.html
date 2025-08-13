@@ -1,109 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Footer Example</title>
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    /* Footer Styles */
-    .footer {
-      background-color: #0a2342; /* Dark Blue */
-      color: #fff;
-      padding: 20px 50px;
-      border-top: 1px solid #fff; /* thin border line */
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blüra – Premium Water</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+   <style>/* Base */
+:root{
+  --blue:#0a2a55;
+  --blue-900:#082246;
+  --text:#1b1b1b;
+  --muted:#6b7280;
+  --white:#fff;
+}
 
-    .footer-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--text);
+  background:#fff;
+}
 
-    /* Left Logo */
-    .footer-left .logo {
-      font-size: 28px;
-      font-weight: bold;
-      color: #fff;
-      margin: 0;
-      font-family: Georgia, serif;
-    }
+.container{width:min(1120px, 92%); margin-inline:auto}
+.row{display:flex; gap:24px; flex-wrap:wrap}
+.alc{align-items:center}
+.jsb{justify-content:space-between}
+.col{flex:1 1 0}
+.col-60{flex:0 1 60%}
+.col-40{flex:0 1 40%}
 
-    /* Center Social */
-    .footer-center {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+img{max-width:100%; display:block}
 
-    .footer-center p {
-      margin: 0;
-      margin-right: 5px;
-    }
+/* Header / Navbar */
+.site-header{position:sticky; top:0; background:#fff; z-index:50; border-bottom:1px solid #eef0f3}
+.brand img{height:38px}
 
-    .footer-center a {
-      color: #fff;
-      font-size: 18px;
-      transition: color 0.3s;
-    }
+.navlinks{list-style:none; margin:0; padding:0; gap:12px}
+.navlinks li{margin:0}
 
-    .footer-center a:hover {
-      color: #1da1f2; /* Highlight color */
-    }
+.nav-pill{
+  text-decoration:none;
+  color:var(--blue);
+  padding:10px 16px;
+  border-radius:10px;
+  transition:all .25s ease;
+  font-weight:600;
+  display:inline-block;
+  border:1px solid transparent;
+}
+.nav-pill:hover{
+  background:var(--blue);
+  color:var(--white);
+  transform:translateY(-1px);
+  box-shadow:0 6px 20px rgba(10,42,85,.18);
+}
 
-    /* Right Links */
-    .footer-right {
-      display: flex;
-      gap: 20px;
-    }
+/* Hero */
+.hero-section{padding:56px 0 0}
+.hero h1{
+  font-size: clamp(28px, 4vw, 44px);
+  line-height:1.15;
+  color:var(--blue);
+  margin:10px 0 8px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+}
+.hero h2{
+  font-weight:400;
+  color:#374151;
+  margin:0 0 8px;
+  font-size: clamp(16px, 2.2vw, 20px);
+}
+.hero p{
+  color:var(--muted);
+  max-width:50ch;
+}
+.elevate_button{
+  margin-top:16px;
+  background:var(--blue);
+  color:#fff;
+  border:none;
+  padding:12px 18px;
+  border-radius:12px;
+  font-weight:700;
+  cursor:pointer;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.elevate_button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 24px rgba(10,42,85,.25);
+}
 
-    .footer-right a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
+.hero-can{width:100%; max-width:460px; margin-inline:auto}
 
-    .footer-right a:hover {
-      color: #1da1f2;
-    }
+/* Marquee */
+.marquee-wrap{
+  overflow:hidden;
+  border-top:1px solid #e5e7eb;
+  border-bottom:1px solid #e5e7eb;
+  margin-top:32px;
+  background:#f8fafc;
+}
+.marquee{
+  display:flex;
+  gap:64px;
+  padding:12px 0;
+  white-space:nowrap;
+  animation: marquee 22s linear infinite;
+  font-weight:600;
+  color:var(--blue);
+}
+.marquee span{padding-right:64px}
+@keyframes marquee{
+  from{ transform: translateX(0) }
+  to{ transform: translateX(-50%) }
+}
 
-    /* Responsive */
-    @media (max-width: 768px) {
-      .footer-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-      }
-    }
-  </style>
+/* Cans split section */
+.cans-section{
+  background:var(--blue);
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+  padding: 280px 0; /* space for cans animation */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.can{
+  position:absolute;
+  bottom:0;
+  transition: all 0.8s ease-in-out;
+  z-index:2;
+}
+.can img{width:220px; display:block; transition: transform 0.8s ease-in-out}
+
+/* initial overlap */
+.can-left{ left:50%; transform: translateX(-130%) scale(1.6) rotate(-8deg) }
+.can-right{ left:50%; transform: translateX(30%) scale(1.6) rotate(8deg) }
+
+/* hover spread */
+.cans-section:hover .can-left{
+  left:40px; transform: scale(1) rotate(-15deg);
+}
+.cans-section:hover .can-right{
+  right:40px; left:auto; transform: scale(1) rotate(15deg);
+}
+
+/* Text block */
+.cans-section .text{
+  position:relative;
+  max-width:880px;
+  text-align:center;
+  z-index:1;
+  padding:0 16px;
+}
+.cans-section .text h2{
+  font-size: clamp(26px, 3vw, 36px);
+  margin:0 0 8px;
+}
+.cans-section .text h3{
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight:800;
+  margin:0 0 14px;
+}
+
+/* word-by-word base */
+[data-ww] .ww{
+  opacity:0;
+  display:inline-block;
+  transform: translateY(14px);
+  transition: opacity .45s ease, transform .45s ease;
+}
+[data-ww] .ww.show{
+  opacity:1;
+  transform: translateY(0);
+}
+
+/* Contact */
+.contact-section{padding:80px 0}
+.contact-section h2{color:var(--blue); margin:0 0 8px}
+
+/* Footer */
+.site-footer{
+  border-top:1px solid #eef0f3;
+  padding:24px 0;
+  color:#6b7280;
+  text-align:center;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .col-60, .col-40{flex:1 1 100%}
+  .cans-section{padding: 220px 0}
+  .can img{width:180px}
+}
+</style>
 </head>
 <body>
 
-  <!-- Footer Section -->
-  <footer class="footer">
-    <div class="footer-container">
-      <!-- Left: Logo -->
-      <div class="footer-left">
-        <h2 class="logo">blüra</h2>
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <nav>
+      <div class="container">
+        <div class="navbar row jsb alc">
+          <div class="brand">
+            <!-- Replace with your logo -->
+            <img src="./assets/img/logo.png" alt="logo" />
+          </div>
+          <ul class="navlinks row alc">
+            <li><a class="nav-pill" href="#story">Our Story</a></li>
+            <li><a class="nav-pill" href="#contact">Contact Us Now</a></li>
+          </ul>
+        </div>
       </div>
+    </nav>
+  </header>
 
-      <!-- Center: Social Media -->
-      <div class="footer-center">
-        <p>Follow us :</p>
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-whatsapp"></i></a>
+  <!-- Hero -->
+  <section class="hero-section" id="home">
+    <div class="container hero">
+      <div class="row">
+        <div class="col col-60">
+          <h2>For souls that seek silence. Every sip returns you</h2>
+          <h1>TO STILLNESS, TO NATURE, TO YOU.</h1>
+          <p>
+            Premium natural mineral water sourced from the Himalayan foothills,
+            sealed in sleek, sustainable aluminium cans.
+          </p>
+          <button class="elevate_button">Elevate Your Hydration</button>
+        </div>
+        <div class="col col-40">
+          <!-- Replace with your hero can -->
+          <img src="./assets/img/can_image.png" alt="can_image" class="hero-can" />
+        </div>
       </div>
+    </div>
 
-      <!-- Right: Links -->
-      <div class="footer-right">
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Privacy Policy</a>
+    <!-- Marquee strip -->
+    <div class="marquee-wrap">
+      <div class="marquee">
+        <span>A Moment Of Clarity In a Chaotic World • </span>
+        <span>A Moment Of Clarity In a Chaotic World • </span>
+        <span>A Moment Of Clarity In a Chaotic World • </span>
+        <span>A Moment Of Clarity In a Chaotic World • </span>
       </div>
+    </div>
+  </section>
+
+  <!-- Cans Split + Text (hover reveal + word-by-word) -->
+  <section class="cans-section" id="story">
+    <div class="can can-left">
+      <img src="./assets/img/Mask group (1).png" alt="Bluira Can Left" />
+    </div>
+    <div class="can can-right">
+      <img src="./assets/img/Mask group (2).png" alt="Bluira Can Right" />
+    </div>
+
+    <div class="text">
+      <h2 data-ww> The Beauty of Blüra Water </h2>
+      <h3 data-ww> Drink like it means Something! </h3>
+      <p data-ww>
+        blüra doesn't shock your tongue or leave an afterthought. It simply
+        disappears, as if it were always part of you. It nourishes without
+        asking for attention. No artificial mineral addition, free of
+        impurities, blüra is natural alkaline water that is soft on the palate
+        and gentle on your body.
+      </p>
+    </div>
+  </section>
+
+  <!-- Simple contact section to anchor -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Email: hello@blura.example</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Blüra</p>
     </div>
   </footer>
 
+  <!-- <script src="script.js"></script> -->
+   <script>/* Smooth scroll for nav links */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const target = document.querySelector(a.getAttribute('href'));
+    if(target){
+      e.preventDefault();
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  });
+});
+
+/* Word-by-word animation
+   - Automatically splits any element with [data-ww] into word spans.
+   - Reveals words one-by-one when:
+       1) the cans section is hovered, OR
+       2) the element scrolls into view (once).
+*/
+
+function wrapWords(el){
+  const text = el.textContent.replace(/\s+/g,' ').trim();
+  el.textContent = '';
+  const frag = document.createDocumentFragment();
+  text.split(' ').forEach((word, i)=>{
+    const span = document.createElement('span');
+    span.className = 'ww';
+    span.textContent = word + (i === text.length-1 ? '' : ' ');
+    frag.appendChild(span);
+  });
+  el.appendChild(frag);
+}
+
+function revealWords(el, baseDelay=120){
+  const spans = el.querySelectorAll('.ww');
+  spans.forEach((s, i)=>{
+    setTimeout(()=> s.classList.add('show'), baseDelay * i);
+  });
+}
+
+document.querySelectorAll('[data-ww]').forEach(wrapWords);
+
+/* Reveal on intersection (scroll into view) */
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      revealWords(entry.target);
+      io.unobserve(entry.target); // run once
+    }
+  });
+},{threshold: 0.2});
+
+document.querySelectorAll('[data-ww]').forEach(el=> io.observe(el));
+
+/* Also reveal when the cans section is hovered */
+const cansSection = document.querySelector('.cans-section');
+if(cansSection){
+  cansSection.addEventListener('mouseenter', ()=>{
+    cansSection.querySelectorAll('[data-ww]').forEach(el=>{
+      // if not shown yet, reveal now
+      if(!el.dataset.revealed){
+        revealWords(el, 110);
+        el.dataset.revealed = '1';
+      }
+    });
+  }, {passive:true});
+}
+</script>
 </body>
 </html>

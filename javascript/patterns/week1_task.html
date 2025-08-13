@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week-1 Task</title>
+</head>
+
+<body>
+    <h1>
+        WEEK 01 TASKS
+    </h1>
+    <ol>
+        <h2>Part A: Basics & Variables (1-10)</h2>
+
+        <script>console.log("-------------------------------Basics & Variables (1-10)--------------------------")</script>
+        <li>Print "Hello JavaScript" in console.</li>
+        <script>console.log("Hello JavaScript");
+        </script>
+        <li>Declare a variable name and store your name, then print it.</li>
+        <script>
+            let name = "Hardi";
+            console.log(name);
+        </script>
+        <li>Swap two numbers using a temporary variable.</li>
+        <script>
+            let a = 10, b = 20;
+            let temporary = a;
+            a = b;
+            b = temporary;
+            console.log("a:", a, "b:", b);
+        </script>
+        <li>Swap two numbers without using a temporary variable.</li>
+        <script>
+            let x = 5, y = 7;
+            x = x + y;
+            y = x - y;
+            x = x - y;
+            console.log("x:", x, "y:", y);
+        </script>
+        <li>Declare constants for PI and gravity, then display them.</li>
+        <script>
+            const PI = 3.14159;
+            const GRAVITY = 9.81;
+            console.log("PI:", PI, "Gravity:", GRAVITY);
+        </script>
+        <li>Show difference between let, const, and var.</li>
+        <script>
+            var language = "JavaScript";
+            let version = "ES6";
+            const author = "Brendan Eich";
+
+            console.log(language, version, author);
+        </script>
+        <li>Store your age in a variable and check its type.</li>
+        <script>
+            let age = 21;
+            console.log(typeof age); 
+        </script>
+        <li>Concatenate first name and last name into a full name.</li>
+        <script>let firstName = "Hardi";
+            let lastName = "Patel";
+            let fullName = firstName + " " + lastName;
+            console.log(fullName);
+        </script>
+        <li>Declare variables of all basic data types (string, number, boolean, null, undefined) and display them.</li>
+        <script>
+            let str11 = "Hello";
+            let num11 = 100;
+            let isValid = true;
+            let emptyValue = null;
+            let notAssigned;
+
+            console.log(str11, num11, isValid, emptyValue, notAssigned);
+        </script>
+        <li>Reassign a let variable and explain why const cannot be reassigned.</li>
+        <script>let city = "Ahmedabad";
+            city = "Mumbai";
+            console.log(city);
+
+            const country = "India";
+            // country = "USA"; // 
+        </script>
+    </ol>
+    <!-- ------------------------------------------------------------------ -->
+    <ol>
+        <h2>Part B: Data Types & Conversion (11-15)</h2>
+        <script>console.log("-------------------------------Part B: Data Types & Conversion (11-15)--------------------------")</script>
+
+        <li>Convert a number to a string using String() and .toString(). </li>
+        <script>let num = 123;
+
+            // Using String()
+            let str1 = String(num);
+            console.log(str1, typeof str1);
+
+            // Using toString()
+            let str2 = num.toString();
+            console.log(str2, typeof str2); 
+        </script>
+        <li>Convert a string "123" to a number using Number() and parseInt().</li>
+        <script>let str = "123";
+
+            // Using Number()
+            let num1 = Number(str);
+            console.log(num1, typeof num1);
+
+            // Using parseInt()
+            let num2 = parseInt(str);
+            console.log(num2, typeof num2); 
+        </script>
+        <li>Show the difference between == and ===.</li>
+        <script>let aa = 10;
+            let bb = "10";
+
+            console.log(aa == bb);
+            console.log(aa === bb); 
+        </script>
+        <li>Check if "Hello" is of type string.</li>
+        <script>let text = "Hello";
+            console.log(typeof text === "string"); 
+        </script>
+        <li>Demonstrate typeof operator with all data types.</li>
+        <script>console.log(typeof "Hello");
+            console.log(typeof 123);
+            console.log(typeof true);
+            console.log(typeof null);
+            console.log(typeof undefined);
+            console.log(typeof { name: "JS" });
+            console.log(typeof [1, 2, 3]);
+            console.log(typeof function () { });  
+        </script>
+    </ol>
+    <!-- ------------------------------------------------------------------------------------------- -->
+    <ol>
+        <h2>
+            Part C: String Methods (16-25)
+        </h2>
+        <script>console.log("------------------------------ Part C: String Methods (16-25)--------------------------")</script>
+
+        <li>Find the length of "JavaScript".</li>
+        <script>let str3 = "JavaScript";
+            console.log(str3.length); 
+        </script>
+        <li>Convert "hello world" into uppercase.</li>
+        <script>let upper = "hello world"
+            console.log(upper.toUpperCase());</script>
+        <li>Convert "HELLO WORLD" into lowercase.</li>
+        <script> let lower = "HELLO WORD"
+            console.log(lower.toLowerCase());</script>
+        <li>Extract the first 4 characters from "Programming".</li>
+        <script>let word = "Programming";
+            console.log(word.slice(0, 4)); 
+        </script>
+        <li>Replace "Java" with "Type" in "JavaScript".</li>
+        <script>let lang = "JavaScript";
+            console.log(lang.replace("Java", "Type"));
+        </script>
+        <li>Find the index of "Script" in "JavaScript".</li>
+        <script>let text3 = "JavaScript";
+            console.log(text3.indexOf("Script")); 
+        </script>
+        <li>Check if "world" exists in "Hello world".</li>
+        <script>let sentence = "Hello world";
+            console.log(sentence.includes("world")); 
+        </script>
+        <li>Trim extra spaces from " JS Basics ".</li>
+        <script>let spaced = "   JS Basics   ";
+            console.log(spaced.trim()); 
+        </script>
+        <li>Split "Apple, Banana, Mango" into an array.</li>
+        <script>let fruits = "Apple, Banana, Mango";
+            console.log(fruits.split(", ")); 
+        </script>
+        <li>Concatenate two strings using .concat().</li>
+        <script>let str44 = "Hello";
+            let str4 = "World";
+            console.log(str44.concat(" ", str4));
+        </script>
+
+    </ol>
+    <ol>
+        <h2>Part D: Number & Math Methods (26-35)
+        </h2>
+        <script>console.log("------------------------------Part D: Number & Math Methods (26-35)-------------------------")</script>
+
+        <li>Round 4.7 using Math.round().</li>
+        <script>console.log(Math.round(4.7)); 
+        </script>
+        <li>Use Math.floor(9.8) and Math.ceil(9.2).</li>
+        <script>console.log(Math.floor(9.8));
+            console.log(Math.ceil(9.2)); 
+        </script>
+        <li>Generate a random number between 0 and 1.</li>
+        <script>console.log(Math.random()); 
+        </script>
+        <li>Generate a random number between 1 and 100.</li>
+        <script>let randomNum = Math.floor(Math.random() * 100) + 1;
+            console.log(randomNum); 
+        </script>
+        <li>Find the maximum and minimum from (10, 5, 20, 3).</li>
+        <script>console.log(Math.max(10, 5, 20, 3));
+            console.log(Math.min(10, 5, 20, 3)); 
+        </script>
+        <li>Find square root of 64.</li>
+        <script>console.log(Math.sqrt(64)); 
+        </script>
+        <li>Find absolute value of -25.</li>
+        <script>console.log(Math.abs(-25)); 
+        </script>
+        <li>Convert a float 45.6789 into 2 decimal places.</li>
+        <script>let num3 = 45.6789;
+            console.log(num3.toFixed(2));
+        </script>
+        <li>Demonstrate isNaN() with different inputs.</li>
+        <script>console.log(isNaN("Hello"));
+            console.log(isNaN(123));
+            console.log(isNaN("123"));
+            console.log(isNaN(NaN));    
+        </script>
+        <li>Use Math.pow(2, 5) to calculate 2⁵.</li>
+        <script>console.log(Math.pow(2, 5)); 
+        </script>
+    </ol>
+    <ol>
+        <h2>Part E: Operators (30-45)</h2>
+        <script>console.log("------------------------Part E: Operators (30-45)--------------------------------");</script>
+        <li>Add two numbers using + operator.</li>
+        <script>let a3 = 10;
+            let b3 = 20;
+            console.log(a3 + b3); 
+        </script>
+        <li>Use modulus % operator to find remainder of 25 ÷ 4.</li>
+        <script>console.log(25 % 4); 
+        </script>
+        <li>Demonstrate ++ pre-increment and post-increment.</li>
+        <script>let pre = 5;
+
+            console.log(++pre);
+            console.log(pre++);
+            console.log(pre);   
+        </script>
+        <li>Use comparison operators to check if 10 > 5.</li>
+        <script>console.log(10 > 5); 
+        </script>
+        <li>Check if two strings "JS" and "JS" are equal.</li>
+        <script>console.log("JS" === "JS");
+        </script>
+        <li>Use logical && to check if 5 > 2 and 10 > 5.</li>
+        <script>console.log(5 > 2 && 10 > 5); 
+        </script>
+        <li>Use logical || to check if either condition is true.</li>
+        <script>console.log(5 > 10 || 10 > 5); 
+        </script>
+        <li>Use logical ! to reverse a boolean value.</li>
+        <script>let isValidd = true;
+            console.log(!isValidd); 
+        </script>
+        <li>Demonstrate += operator with a variable.</li>
+        <script>let total = 100;
+            total += 50;
+            console.log(total); 
+        </script>
+        <li>Write a small expression combining arithmetic and logical operators.</li>
+        <script>let result = (10 + 5) > 12 && (20 % 2 === 0);
+            console.log(result); 
+        </script>
+    </ol>
+    <ol>
+        <h2>Part F: Conditionals (46-50)</h2>
+        <script>console.log("------------------------------------Part F: Conditionals (46-50)-------------------------------")</script>
+        <li>Write a program to check if a number is positive, negative, or zero.</li>
+        <script> 
+        let num5 = 22;
+            if (num > 0) {
+                console.log("Positive");
+            }
+            else {
+                console.log("Negative");
+            }
+
+        </script>
+        <li>Check if a number is even or odd.</li>
+        <script>
+        let n = 4;
+            if (n % 2 === 0) {
+                console.log("Even");
+            }
+
+            else {
+                console.log("Odd");
+            }</script>
+        <li>Check if a person is eligible to vote (age ≥ 18).</li>
+        <script> 
+        let agee = 18;
+            if (agee >= 18) {
+                console.log("Eligible to vote");
+            }
+            else {
+                console.log("Not eligible");
+            }
+        </script>
+        <li> Write a program to find the largest of two numbers.</li>
+        <script>
+        let a5 = 10, b5 = 20;
+            if (a5 > b5) {
+                console.log("A is larger");
+            }
+            else if (b5 > a5) {
+                console.log("B is larger");
+            }
+            else { console.log("Both are equal"); }</script>
+        <li> Write a program to find the largest of three numbers.</li>
+        <script>
+         let aaa = 10, bbb = 20, ccc = 15;
+            if (aaa >= bbb && aaa >= ccc) {
+                console.log("A is largest");
+            }
+            else if (bbb >= aaa && bbb >= ccc) {
+                console.log("B is largest");
+            }
+            else {
+                console.log("C is largest");
+            }
+        </script>
+    </ol>
+</body>
+
+</html>
