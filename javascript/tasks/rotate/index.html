@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rotating Square with Center Text</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f0f0f0;
+      font-family: sans-serif;
+    }
+
+    .main1 {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .all-squares {
+      width: 100px;
+      height: 100px;
+      transition: transform 0.6s ease;
+    }
+
+    .one
+     { 
+        background-color: red;
+         transform-origin: top left;
+ }
+    .two 
+    { 
+        background-color: green; 
+        transform-origin: top right;
+     }
+    .three
+     {
+         background-color: blue;
+         transform-origin: bottom left;
+     }
+    .four 
+    {
+         background-color: yellow;
+         transform-origin: bottom right; 
+    }
+
+    /* Rotate each on hover */
+    .main1:hover .one 
+    { 
+        transform: rotate(180deg);
+     }
+    .main1:hover .two
+     { 
+        transform: rotate(-180deg);
+     }
+    .main1:hover .three
+     { 
+        transform: rotate(-180deg); 
+    }
+    .main1:hover .four 
+    {
+         transform: rotate(180deg); 
+    }
+
+    /* Center text */
+    .center-text {
+      position: absolute;
+      top: 107px;
+      left: 51px;
+  
+      font-size: 20px;
+      text-align: center;
+     
+     z-index: -1;
+     
+    }
+
+    .main1:hover .center-text {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main1">
+    <div class="all-squares one"></div>
+    <div class="all-squares two"></div>
+    <div class="all-squares three"></div>
+    <div class="all-squares four"></div>
+    <div class="center-text">Hardi</div>
+  </div>
+
+</body>
+</html>

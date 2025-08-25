@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Women's Shoes</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>FOREVER 21</h1>
+    <nav>
+      <a href="#">WOMEN</a>
+      <a href="index2.html">PLUS</a>
+      <a href="#">MEN</a>
+      <div class="dropdown">
+      <a href="#"class="dropbtn " >SHOES</a>
+ 
+  <div class="dropdown-content">
+    <a href="#" onclick="openInSameTab(event)">Allegra James 
+
+  </a>
+    <a href="#" class="products" >D'Amelio </a>
+    <a href="#"> Ewing Athletics </a>
+    <a href="#"> Jelavu </a>
+    <a href="#"> Saint G </a>
+    <a href="#"> Walnut Melbourne</a>
+    <!-- <a href="#"> sandels</a> -->
+  </div>
+</div>
+      <a href="#">ACCESSORIES</a>
+      <a href="#">SALE</a>
+    </nav>
+    <input type="text" placeholder="Search..." class="search-box" />
+  </header>
+
+  <main>
+    <section class="filters">
+      <h2>FILTER BY</h2>
+      <div class="filter-group">
+        <label>Brand</label>
+        <div class="checkbox-list">
+          <label><input type="checkbox" class="brand-filter" value="Allegra James"> Allegra James (33)</label><br>
+          <label><input type="checkbox" class="brand-filter" value="D'Amelio"> D'Amelio (8)</label><br>
+          <label><input type="checkbox" class="brand-filter" value="Ewing Athletics"> Ewing Athletics (7)</label><br>
+          <label><input type="checkbox" class="brand-filter" value="Jelavu"> Jelavu (22)</label><br>
+          <label><input type="checkbox" class="brand-filter" value="Saint G"> Saint G (62)</label><br>
+          
+          <label><input type="checkbox" class="brand-filter" value="Walnut Melbourne"> Walnut Melbourne (9)</label><br>
+          <button onclick="clearFilters()">Clear All</button>
+        </div>
+      </div>
+    </section>
+  
+    <section class="products" id="productList">
+       <!-- JS will populate this  -->
+    </section>  
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>

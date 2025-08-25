@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Example</title>
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Footer Styles */
+    .footer {
+      background-color: #0a2342; /* Dark Blue */
+      color: #fff;
+      padding: 20px 50px;
+      border-top: 1px solid #fff; /* thin border line */
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* Left Logo */
+    .footer-left .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #fff;
+      margin: 0;
+      font-family: Georgia, serif;
+    }
+
+    /* Center Social */
+    .footer-center {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-center p {
+      margin: 0;
+      margin-right: 5px;
+    }
+
+    .footer-center a {
+      color: #fff;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .footer-center a:hover {
+      color: #1da1f2; /* Highlight color */
+    }
+
+    /* Right Links */
+    .footer-right {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-right a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-right a:hover {
+      color: #1da1f2;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Left: Logo -->
+      <div class="footer-left">
+        <h2 class="logo">blüra</h2>
+      </div>
+
+      <!-- Center: Social Media -->
+      <div class="footer-center">
+        <p>Follow us :</p>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+
+      <!-- Right: Links -->
+      <div class="footer-right">
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

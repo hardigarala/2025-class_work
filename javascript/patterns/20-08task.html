@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul> PART-01 Arithmetic Operators<br>
+        <br>
+        <li>1. Declare two numbers a = 12, b = 5. Print sum, difference, product, quotient, and remainder.</li>
+        <li>2. Use the exponentiation operator to calculate 5² and 3³.</li>
+        <li>3. Create a variable num = 20. Apply increment (++) and decrement (--) operators step by step.</li>
+    </ul><br><br>
+    <!-- // --------------------------------------------------------------------------------------------------------------------- -->
+    <ul>PART-02: Assignment Operators <br><br>
+        <li>4. Create a variable x = 50. Use +=, -=, *=, /=, %= operators on x. Print after each step.</li>
+        <li>5. Start with score = 100. Add 10 using +=, subtract 20 using -=, then divide by 2 using /=. Print final
+            score.</li>
+    </ul><br><br>
+    <!-- // --------------------------------------------------------------------------------------------------------------------- -->
+    <ul>PART-03: Comparison Operators <br><br>
+        <li>6. Declare age1 = 25, age2 = "25". Compare using == and ===. Print results</li>
+        <li>7. Write a program to check if marks = 35 is greater than or equal to 40. If true → print “Pass”, else →
+            “Fail”.</li>
+        <li>8. Take p = 15, q = 30. Print results of p > q, p < q, p>= q, p <= q, p !=q, p !==q.</li>
+    </ul><br><br>
+    <!-- // --------------------------------------------------------------------------------------------------------------------- -->
+    <ul>PART-04: Logical Operators <br><br>
+        <li>9. Create isStudent = true, hasIDCard = false. Use &&, ||, and ! to check exam hall eligibility.</li>
+        <li>10. Check if temperature = 32. If between 30 and 40 → print “It’s Hot”, else “Normal”.</li>
+        <li>11. Create username = "admin", password = "1234". If both are correct → print “Login Successful”, else →
+            print “Login Failed”.</li>
+    </ul><br><br>
+    <!-- // --------------------------------------------------------------------------------------------------------------------- -->
+    <ul>PART-05: Mixed-Type Operator Tasks <br><br>
+        <li>12. Add 10 + "20". Print result and type.</li>
+        <li>13. Subtract "50" (string) from 20. Print result.</li>
+        <li>14. Multiply true with 5. Print result.</li>
+        <li>15. Divide 0 / 10 and 10 / 0. Print both results.</li>
+    </ul>
+    <script>
+        // Part 1: Arithmetic Operators
+        const a = 12, b = 5;
+
+        console.log('sum:', a + b);
+        console.log('difference:', a - b);
+        console.log('product:', a * b);
+        console.log('quotient:', a / b);
+        console.log('remainder:', a % b);
+
+        // Part 2: Exponentiation
+        console.log('5 ** 2 =', 5 ** 2);
+        console.log('3 ** 3 =', 3 ** 3);
+
+        // Part 3: Increment / Decrement 
+        let num = 20;
+        console.log('main value', num);
+
+        num++;                                // increment 
+        console.log('after(post increment) num++:', num);
+
+        num--;                                // decrement 
+        console.log('after(post decrement) num--:', num);
+
+        // (extra) Prefix vs postfix demo:
+        num = 20;
+        console.log('log num++:', num++);
+        console.log('now num is:', num);
+        console.log('(pre increments) ++num:', ++num);
+        // ---------------------------------------------------------------------------------------------------------------------
+        // 4) Compound assignment on x
+        let x = 50;
+        x += 10; console.log(x);
+        x -= 5; console.log(x);
+        x *= 2; console.log(x);
+        x /= 10; console.log(x);
+        x %= 4; console.log(x);
+        // 5) score updates in sequence
+        let score = 100;
+        score += 10;
+        score -= 20;
+        score /= 2;
+        console.log(score);
+        // -----------------------------------------------------------------------------------------------------------------
+        // 6) age1 vs age2
+        let age1 = 25;
+        let age2 = "25";
+
+        console.log("age1 == age2:", age1 == age2);
+        console.log("age1 === age2:", age1 === age2);
+
+
+        // 7) Check pass/fail
+        let marks = 35;
+        if (marks >= 40) {
+            console.log("Pass");
+        } else {
+            console.log("Fail");
+        }
+
+
+        // 8) Comparisons with p, q
+        let p = 15, q = 30;
+
+        console.log("p > q:", p > q);
+        console.log("p < q:", p < q);
+        console.log("p >= q:", p >= q);
+        console.log("p <= q:", p <= q);
+        console.log("p != q:", p != q);
+        console.log("p !== q:", p !== q);
+        // -----------------------------------------------------------------------------------------------------------------
+        // 9) Exam hall eligibility
+        let isStudent = true;
+        let hasIDCard = false;
+
+        console.log("Eligibility with && :", isStudent && hasIDCard);
+        console.log("Eligibility with || :", isStudent || hasIDCard);
+        console.log("Not Student (!):", !isStudent);
+
+
+        // 10) Temperature check
+        let temperature = 32;
+
+        if (temperature >= 30 && temperature <= 40) {
+            console.log("It's Hot");
+        } else {
+            console.log("Normal");
+        }
+
+
+        // 11) Login check
+        let username = "admin";
+        let password = "1234";
+
+        if (username === "admin" && password === "1234") {
+            console.log("Login Successful");
+        } else {
+            console.log("Login Failed");
+        }
+        // -----------------------------------------------------------------------------------------------------------------
+        // 12) Number + String
+        let result1 = 10 + "20";
+        console.log(result1);
+        console.log(typeof result1);
+
+
+        // 13) Subtraction with string number
+        let result2 = 20 - "50";
+        console.log(result2);
+
+
+        // 14) Boolean with number
+        let result3 = true * 5;
+        console.log(result3);
+
+        let result4 = false * 5;
+        console.log(result4);
+
+
+        // 15) Division special cases
+        console.log(0 / 10);
+        console.log(10 / 0);
+
+    </script>
+</body>
+
+</html>

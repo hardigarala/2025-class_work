@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.error {
+  border: 1px solid red;
+}
+</style>
+</head>
+<body>
+
+<div id="container">
+</div>
+<button onclick="createTextbox()">Add Textbox</button>
+
+<script>
+  document.getElementById('container').addEventListener('input', function(event) {
+    if (event.target.tagName === 'INPUT' && event.target.type === 'text') {
+      validateTextbox(event.target);
+    }
+  });
+  debugger
+
+  function validateTextbox(textbox) {
+    const value = textbox.value;
+    if (value.trim() === '') {
+        textbox.classList.add('error');
+        textbox.setCustomValidity("This field cannot be empty");
+    } else {
+      textbox.classList.remove('error');
+      textbox.setCustomValidity("");
+    }
+  }
+
+  function createTextbox() {
+    const container = document.getElementById('container');
+    const inputElement = document.createElement('input');
+    inputElement.type = 'text';
+    container.appendChild(inputElement);
+  }
+</script>
+
+</body>
+</html>

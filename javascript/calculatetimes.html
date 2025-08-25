@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Date Interval Calculator</h1>
+    <label for=""> Start Date:</label><br><br>
+    <input type="date" name="" id="startDate"><br><br>
+    <label for="">End Date:</label><br><br>
+    <input type="date" name="" id="endDate"><br><br>
+
+    <button onclick="calculateInterval()">Calculate Interval</button>
+    <div>
+        <ol>
+            <h2 id="results">result</h2>
+            <li> Days:<span id="result"></span></li>
+            <li> Months:<span id="results2"></span></li>
+            <li> Years:<span id="results3"></span></li>
+            <li>Weeks:<span id="results4"></span> </li>
+        </ol>
+    </div>
+    <!-- <p id="result"></p> -->
+    <script>
+        function calculateInterval() {
+            const start = new Date(document.getElementById("startDate").value);
+            const end = new Date(document.getElementById("endDate").value);
+
+            const Time = end - start;
+            const Day = 1000 * 60 * 60 * 24;
+            const days = Math.floor(Time / Day);
+            const Months = Math.floor(days / 31);
+            const year = Math.floor(Months / 12);
+            const weeks = Math.floor(days / 7);
+
+
+            document.getElementById("result").innerText =
+                ` ${days} days`
+            document.getElementById("results2").innerText =
+                ` ${Months} Months`
+            document.getElementById("results3").innerText =
+                ` ${year} year`
+            document.getElementById("results4").innerText =
+                ` ${weeks} weeks`
+
+        } 
+    </script>
+</body>
+
+</html>

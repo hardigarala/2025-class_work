@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotating Squares Loader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: aqua;
+        }
+
+        .loader {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .square {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transform-origin: center;
+        }
+
+        .red {
+            width: 150px;
+            height: 150px;
+            background: rgb(234, 0, 255);
+        }
+
+        .green {
+            width: 100px;
+            height: 100px;
+            background: rgba(124, 0, 128, 0.308);
+        }
+
+        .blue {
+            width: 50px;
+            height: 50px;
+            background: rgba(225, 0, 255, 0.712);
+        }
+
+        .loader.loading .red {
+            animation: rotate 3s linear infinite;
+        }
+
+        .loader.loading .green {
+            animation: rotate 2s linear infinite;
+        }
+
+        .loader.loading .blue {
+            animation: rotate 1s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div id="loader" class="loader">
+        <div class="square red">
+            <div class="square green">
+                <div class="square blue"></div>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <button onclick="toggleLoader()">Click</button>
+
+    <script>
+        function toggleLoader() {
+            const loader = document.getElementById("loader");
+            loader.classList.toggle("loading");
+        }
+    </script>
+</body>
+
+</html>

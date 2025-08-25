@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    debugger
+let n = parseInt(prompt("Enter rows for Hollow Inverted Right-Angled Triangle: "));
+let pattern = "";    //pattern string
+if (n > 1) {      //no star pattern for 0 or negative numbers
+    for (let i = 1; i <= n; i++) {    //first 'for loop' for horizontal lines
+        for (let j = 1; j <= i; j++) {      //second 'for loop' to print star and space between them
+            if (j==1 || j==i || i==n) {   //condition to make it hollow
+                pattern += "* ";
+            }
+            else{
+                pattern += "  ";
+            }
+        }
+        pattern += "\n";    //new line after row completion
+    }
+    console.log(pattern);   //printing star to console
+}
+else {
+    pattern = "Number must be greater than 1 to print star pattern.";
+}
+</script>
+
+</body>
+</html>
+let n = parseInt(prompt("Enter rows for Hollow Inverted Right-Angled Triangle: "));
+
+for(let i = n; i >= 1; i--) {
+    let row = "";
+    for(let j = 1; j <= i; j++) {
+        // Border and last row stars
+        if(j === 1 || j === i || i === n) {
+            row += "* ";
+        } else {
+            row += "  ";
+        }
+    }
+    console.log(row);
+}
+// if (n > 1) {      //no star pattern for 0 or negative numbers
+let pattern = "";    //pattern string
+    for (let i = 1; i <= n; i++) {    //first 'for loop' for horizontal lines
+        for (let j = 1; j <= i; j++) {      //second 'for loop' to print star and space between them
+            if (j==1 || j==i || i==n) {   //condition to make it hollow
+                pattern += "* ";
+            }
+            else{
+                pattern += "  ";
+            }
+        }
+        pattern += "\n";    //new line after row completion
+    }
+    console.log(pattern);   //printing star to console
+// }
+// else {
+//     pattern = "Number must be greater than 1 to print star pattern.";
+// }
+-----------------------------------------------------------------------------------
+
+let n = parseInt(prompt("Enter rows for Hollow Inverted Right-Angled Triangle: "));
+// let n=5;
+for (let i = n; i >= 1; i--) {
+    let row = "";
+    for (let j = 1; j <= i; j++) {
+        // Border and last row stars
+
+        row += "* ";
+
+    }
+    console.log(row);
+}
+let pattern = "";
+for (let i = 1; i <= n; i++) {
+    for (let j = n; j <= n; j++) {
+        pattern += "* ";
+    }
+    console.log(pattern);
+}
+
+
+* * * * * * * * * * 
+* * * * * * * * * 
+* * * * * * * * 
+* * * * * * * 
+* * * * * * 
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * * * 
+* * * * * * * 
+* * * * * * * * 
+* * * * * * * * * 
+* * * * * * * * * *
+----------------------------------------------------------
+let n=parseInt(prompt("enter the value"));
+
+  for (let i = 1; i <= n; i++) {
+    let rowString = '';
+    // Add leading spaces
+    for (let j = 1; j <= n - i; j++) {
+      rowString += '   ';
+    }
+    // Add stars
+    for (let k = 1; k <= 2 * i - 1; k++) {
+      rowString += ' * ';
+    }
+    console.log(rowString);
+  }
+  enter the value4
+          * 
+       *  *  * 
+    *  *  *  *  * 
+ *  *  *  *  *  *  * 
+ ----------------------------------------------------------
+ let n=parseInt(prompt("enter the value"));
+
+  for (let i = n; i >=1 ; i--) {
+    let rowString = '';
+    // Add leading spaces
+    for (let j = 1; j <= n - i; j++) {
+      rowString += '   ';
+    }
+    // Add stars
+    for (let k = 1; k <= 2 * i - 1; k++) {
+      rowString += ' * ';
+    }
+    console.log(rowString);
+  }
+enter the value 4
+ *  *  *  *  *  *  * 
+    *  *  *  *  * 
+       *  *  * 
+          * 
+          
+----------------------------------------------------------
+          

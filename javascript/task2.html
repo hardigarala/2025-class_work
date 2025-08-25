@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+
+<body>
+  <script>
+    let java = prompt("enter your marks in java")
+    let javascript = prompt("enter your marks in javascript")
+    let html = prompt("enter your marks in html")
+    let css = prompt("enter your marks in css")
+
+
+    // let mark=(parseFloat(hindi)+parseFloat(gujarti)+parseFloat(english)+parseFloat(computer));
+    let mark = java + javascript + html + css
+    let total = mark / 4
+    let grade = (mark/400)*100;
+
+    // if (java > 100) {
+    //   document.write("write correct mark for java");
+    // }
+    // if (javascript > 100) {
+    //   document.write("write correct mark for javascript");
+    // }
+    // if (html > 100) {
+    //   document.write("write correct mark for html");
+    // }
+    // if (css > 100) {
+    //   document.write("write correct mark for css");
+    // }
+    // else if (grade <= 100 && grade > 80) {
+    //   document.write("congratulation you are pass with distinction");
+    //   document.write("your total percentage is " + "", grade, "%");
+    // }
+    // else if (grade <= 80 && grade > 75) {
+    //   document.write("congratulation you are pass with first class");
+    //   document.write("your total percentage is " + "", grade, "%");
+    // }
+    // else if (grade <= 75 && grade > 50) {
+    //   document.writeln("congratulation you are pass with second class");
+    //   document.writeln("your total percentage is " + "", grade, "%");
+    // }
+    // else if (grade <= 50 && grade > 33) {
+    //   document.writeln("congratulation you are pass with third class");
+    //   document.writeln("your total percentage is " + "", grade, "%");
+    // }
+    // else {
+    //   document.writeln("sorry!! yaar better luck next time, bcz you are failed")
+    //   document.writeln("your total percentage is " + "", grade, "%");
+    // }
+    if (grade <= 100 && grade > 80) {
+      document.write("congratulation you are pass with distinction");
+      document.write("your total percentage is " + "", grade, "%");
+    }
+    else if (grade <= 80 && grade > 75) {
+      document.write("congratulation you are pass with first class");
+      document.write("your total percentage is " + "", grade, "%");
+
+    }
+    else if (grade <= 75 && grade > 50) {
+      document.write("congratulation you are pass with second class");
+      document.writeln("your total percentage is " + "", grade, "%");
+
+
+    }
+    else if (grade <= 50 && grade > 33) {
+      document.writeln("congratulation you are pass with third class");
+      document.writeln("your total percentage is " + "", grade, "%");
+    }
+    else {
+      document.writeln("sorry!! yaar better luck next time, bcz you are failed")
+      document.writeln("your total percentage is " + "", grade, "%");
+    }
+
+  </script>
+</body>
+
+</html>

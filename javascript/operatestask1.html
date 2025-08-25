@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Assignment Operators </title>
+</head>
+
+<body>
+    <script>
+        //        1. Assign a value to a variable with =. 
+        // let a;
+        // a=5;
+        // document.write(a);
+
+        // 2. Increase a value by 10 using +=. 
+        // let a=10;
+        // a+=2
+        // console.log(a);
+        // document.write(a);
+
+
+
+        // 3. Reduce a value using -=.
+        // let a=10;
+        // a-=2
+        // console.log(a);
+        // document.write(a);
+
+
+
+
+        // 4. Multiply and reassign using *=. 
+
+        // let a=20;
+        // a*=2
+        // console.log(a);
+        // document.write(a);
+
+        // 5. Divide and reassign using /=. 
+        //  let a=20;
+        // a/=2
+        // console.log(a);
+        // document.write(a);
+
+        // 6. Use modulus assignment %=.
+        //  let a=23;
+        // a%=2
+        // console.log(a);
+        // document.write(a);
+
+        // 7. Use exponentiation assignment **=. 
+        //  let a=20;
+        // a**=2
+        // console.log(a);
+        // document.write(a);
+
+        // 8. Chain multiple assignment operators.
+        // let a = 20;
+        // a *= 2 + 4 - 5
+        // console.log(a);
+        // document.write(a);
+
+        // 9. Display results at each step to observe the changes. 
+
+
+
+        // 10. Practice all assignments in a calculator app.
+        let num1 = parseFloat(prompt("enter value one "))
+        let num2 = parseFloat(prompt("enter value two "))
+        let op = prompt("enter any operator(+ , - , * , /) ")
+        switch (op) {
+            case "+":
+                document.write("sum of " + num1 + " " + "and " + num2 + " " + "is " + (num1 + num2) + "<br>")
+                break;
+            case "-":
+                document.write("sub of " + num1 + " " + "and " + num2 + " " + "is " + (num1 - num2) + "<br>")
+                break;
+            case "*":
+                document.write("mul of " + num1 + " " + "and " + num2 + " " + "is " + (num1 * num2) + "<br>")
+                break;
+            case "/":
+                document.write("sum of " + num1 + " " + "and " + num2 + " " + "is " + (num1 / num2) + "<br>")
+                break;
+                default:
+                    document.write("invalid operators")
+
+        }
+
+    </script>
+</body>
+
+</html>

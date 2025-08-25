@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //    1. Create an array numbers with values [5, 10, 15, 20] and add 25 at the end.
+        // let hardi = [5, 10, 15, 20];
+        // hardi.push(25);
+        // console.log(hardi);
+        let hardi = [1,2,3,4];
+        hardi.push(6);
+        console.log(hardi);
+        
+        // 2. Remove the last element from the numbers array and display the updated array.
+        hardi.pop();
+        console.log(hardi);
+        // 3. Add 0 at the beginning of the numbers array.
+        hardi.unshift(300);
+        console.log(hardi);
+        // 4. Remove the first element from the numbers array and display the updated array.
+        hardi.shift();
+        console.log(hardi);
+        // 5. Find the hardi of 15 in the numbers array.
+        hardi = hardi.indexOf(15);
+        console.log(hardi);
+        // 6. Extract [200, 300] from an array [100, 200, 300, 400, 500].
+        let arr2 = [100, 200, 300, 400, 500];
+        arr3 = arr2.slice(1, 3);
+        console.log(arr3);
+        // 7. Remove the third element from ["Red", "Green", "Blue", "Yellow"].
+        let colors = ["Red", "Green", "Blue", "Yellow"];
+        colors.splice(2, 2,"w","w");
+        console.log(colors);
+        // 8. Convert ["JavaScript", "is", "awesome"] into "JavaScript is awesome".
+        // / 8. Convert array to string
+        let sentence = ["JavaScript", "is", "awesome"];
+        let joined = sentence.join(" ");
+        console.log(joined);
+        //  9. Reverse[9, 8, 7, 6, 5].
+        let reversed = [9, 8, 7, 6, 5].reverse();
+        console.log(reversed);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

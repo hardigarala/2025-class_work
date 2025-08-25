@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <h1>Date Interval Calculator</h1>
+    <label for=""> Start Date:</label><br /><br />
+    <input type="date" name="" id="" /><br /><br />
+    <label for="">End Date:</label><br /><br />
+    <input type="date" name="" id="" /><br /><br />
+    <input type="submit" value="calculate Interval" />
+    <div>
+      <ol>
+        <h2 id="results">result</h2>
+        <li id="results">Days:</li>
+        <li id="results">Months:</li>
+        <li id="results">Years</li>
+        <li id="results">weeks:</li>
+      </ol>
+    </div>
+    <script>
+      function calculateInterval() {
+        const start = new Date(document.getElementById("startDate").value);
+        const end = new Date(document.getElementById("endDate").value);
+
+        if (!start || !end || isNaN(start) || isNaN(end)) {
+          document.getElementById("result").innerText =
+            "Please select valid dates.";
+          return;
+        }
+
+        const diffTime = end - start;
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        document.getElementById(
+          "result"
+        ).innerText = Difference: ${diffDays} day(s);
+      }
+    </script> -->
+   
+  <h3>Date Interval Calculator (in Days)</h3>
+  <label>Start Date:</label>
+  <input type="date" id="startDate"><br><br>
+
+  <label>End Date:</label>
+  <input type="date" id="endDate"><br><br>
+
+  <button onclick="calculateInterval()">Calculate Interval</button>
+
+  <p id="result"></p>
+
+  <script>
+    function calculateInterval() {
+      const start = new Date(document.getElementById("startDate").value);
+      const end = new Date(document.getElementById("endDate").value);
+
+      
+
+      const diffTime = end - start;
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+      document.getElementById("result").innerText =
+        `Difference: ${diffDays} days`
+    }
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    
+   <h1> Objects in JavaScript are fundamental data structures that store collections of key-value pairs, 
+    known as properties. 
+    <br>Here's a breakdown of key concepts:<br></h1>
+<h2>1. Object Creation:<br>
+Object Literals: Defined using curly braces {} with comma-separated key-value pairs.<br>
+JavaScript<br></h2>
+
+   <h2> const person = {<br>
+      name: "John",<br>
+      age: 30,<br>
+      city: "New York"<br>
+   };<br>
+Object Constructor: Created using the new Object() syntax, though less common than literals.<br>
+
+JavaScript <br></h2>
+
+   <h2> const person = new Object();<br>
+    person.name = "John";<br>
+    person.age = 30;<br>
+Constructor Functions: Functions used to create objects with similar properties.<br>
+JavaScript<br>
+
+    function Person(name, age) {<br>
+      this.name = name;<br>
+      this.age = age;<br>
+    }<br>
+    const person1 = new Person("John", 30);<br>
+Object.create(): Creates a new object with a specified prototype.<br>
+JavaScript<br>
+
+    const proto = { greet: function() { console.log("Hello"); } };<br>
+    const obj = Object.create(proto);<br>
+</h2>
+
+ <h2>2. Properties: <br>
+Key-value pairs where keys are strings (or Symbols) and values can be any data type (numbers, strings, objects, functions, etc.).<br>
+Accessed using dot notation (object.property) or bracket notation (object['property']).<br> Bracket notation is necessary when keys are not valid identifiers or are stored in variables.<br>
+Properties can be added, changed, or deleted dynamically.</h2><br>
+  <h2>3. Methods:<br>
+Functions that are properties of an object. They perform actions associated with the object.<br>
+Accessed using dot or bracket notation and called like regular functions (object.method()).<br>
+The this keyword within a method refers to the object the method belongs to.<br></h2>
+  <h2>4. Prototypes:
+Every object in JavaScript has a prototype, which is another object.<br>
+Objects inherit properties and methods from their prototypes.<br>
+The prototype chain allows for code reuse and inheritance.<br>
+The Object.prototype is the ultimate prototype for all objects.</h2>
+ <h2>
+<!-- 5. Key Object Methods:
+Object.keys(object): Returns an array of an object's keys.<br>
+Object.values(object): Returns an array of an object's values.<br>
+Object.entries(object): Returns an array of key-value pairs.<br>
+Object.assign(target, ...sources): Copies properties from source objects to a target object. <br>
+Object.is(value1, value2): Checks if two values are the same.<br></h2>
+<h2>
+6. Object Mutability:
+Objects are mutable: Changes to an object affect all references to it.<br>
+Assigning an object to a new variable does not create a copy, but rather a reference.<br></h2>
+<h2>
+7. Object-Oriented Programming (OOP):
+JavaScript is a prototype-based OOP language.<br>
+Objects are used to represent real-world entities.<br>
+Concepts like encapsulation, inheritance, and polymorphism can be implemented using objects.<br></h2>
+<h2>
+8. Built-in Objects:
+JavaScript has built-in objects like Array, Date, Math, and String, each with specific properties and methods.<br>
+These objects are instances of the Object type.<br>
+In summary, objects in JavaScript are versatile and powerful tools for storing and manipulating data. Understanding these concepts is crucial for effective JavaScript development.<br></h2> -->
+</body>
+</html>

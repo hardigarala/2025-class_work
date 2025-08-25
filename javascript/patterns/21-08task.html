@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>conditional statement</title>
+</head>
+
+<body>
+    <ol>
+        <li>1 Number Sign Checker Write a program that checks whether a number is positive, negative, or zero.</li>
+        <script>let num = Number(prompt("Enter a number: that  checks whether a number is positive, negative, or zero."));
+
+            if (num > 0) {
+                console.log("Positive");
+            } else if (num < 0) {
+                console.log("Negative");
+            } else {
+                console.log("Zero");
+            }
+        </script>
+        <li>2. Even or Odd Take a number as input and check whether it is even or odd.</li>
+        <script>
+            let n = Number(prompt("Enter a number: it is check whether it is even or odd."));
+
+            if (n % 2 === 0) {
+                console.log("Even");
+            } else {
+                console.log("Odd");
+            }
+
+        </script>
+        <li>3. Voting Eligibility Ask the user for their age and print whether they are eligible to vote (18 or above)
+            or not.</li>
+        <script>
+            let age = Number(prompt("Enter your age: "));
+
+            if (age >= 18) {
+                console.log("Eligible to vote");
+            } else {
+                console.log("Not eligible to vote");
+            }
+
+        </script>
+        <li>4. Largest of Two Numbers Compare two numbers and print the greater number.</li>
+        <script>
+            let a = Number(prompt("Enter first number:"));
+            let b = Number(prompt("Enter second number:"));
+
+            if (a > b) {
+                console.log("Largest number:", a);
+            } else if (b > a) {
+                console.log("Largest number:", b);
+            } else {
+                console.log("Both are equal");
+            }
+
+        </script>
+        <li>5. Grade Calculator Take marks as input and print grades: 90–100 → A 75–89 → B 50–74 → C Below 50 → Fail
+
+            <script>
+                let marks = Number(prompt("Enter marks:"));
+
+                if (marks >= 90 && marks <= 100) {
+                    console.log("Grade: A");
+                } else if (marks >= 75 && marks <= 89) {
+                    console.log("Grade: B");
+                } else if (marks >= 50 && marks <= 74) {
+                    console.log("Grade: C");
+                } else if (marks < 50) {
+                    console.log("Grade: Fail");
+                } else {
+                    console.log("Invalid marks");
+                }
+
+            </script>
+        </li>
+        <li>6. Leap Year Checker Check whether a given year is a leap year or not.</li>
+        <script>        let year = Number(prompt("Enter year:"));
+
+            if ((year % 400 === 0) || (year % 4 === 0 && year % 100 !== 0)) {
+                console.log("Leap Year");
+            } else {
+                console.log("Not a Leap Year");
+            }
+        </script>
+
+        <li>7. Simple Calculator (switch case) Take two numbers and an operator (+, -, *, /). Use switch-case to perform
+            the calculation.</li>
+        <script>let x = Number(prompt("Enter first number:"));
+            let y = Number(prompt("Enter second number:"));
+            let op = prompt("Enter operator (+, -, *, /):");
+
+            switch (op) {
+                case "+":
+                    console.log("Result:", x + y);
+                    break;
+                case "-":
+                    console.log("Result:", x - y);
+                    break;
+                case "*":
+                    console.log("Result:", x * y);
+                    break;
+                case "/":
+                    if (y !== 0) {
+                        console.log("Result:", x / y);
+                    } else {
+                        console.log("Error! Division by zero");
+                    }
+                    break;
+                default:
+                    console.log("Invalid operator");
+            }
+        </script>
+        <li>8. Character Type Checker Take a character input and check if it is: A vowel, A consonant, or Not a letter.
+        </li>
+        <li>9. Discount on Shopping If shopping amount is: More than 500 → 20% discount 200–500 → 10% discount Below 200
+            → No discount Print final price after discount.</li>
+        <li>10. Traffic Light Simulation Take input as "red", "yellow", or "green". Display appropriate message: Red →
+            Stop Yellow → Get Ready Green → Go</li>
+    </ol>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        button {
+            padding: 7px;
+            background-color: burlywood;
+        }
+
+        .container {
+            width: 1336px;
+        }
+
+        .m-10 {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .circle {
+            margin: auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 75px;
+            background-color: #0e0ee27a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.411);
+        }
+        
+
+       .number {
+            width: 60px;
+            font-size: 18px;
+            padding: 5px;
+            text-align: center;
+        }
+
+
+        #countdown {
+            font-size: 40px;
+            color: rgba(0, 0, 0, 0.384);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="">
+            <div class="circle"> <span id="countdown">00:00</span></div>
+            <div><input type="number" id="timeInput" class="m-10 number" value="10" min="1"> </div>
+            <div>
+                <button onclick="startTimer()"> Start </button>
+                 
+                <button onclick="resetTimer()"> Reset</button>
+
+            </div>
+        </section>
+    </main>
+    <script>
+        function startTimer() {
+            const input = document.getElementById("timeInput");
+            const countdownEl = document.getElementById("countdown");
+            let time = parseInt(input.value);
+
+            let timer = setInterval(() => {
+                let minutes = Math.floor(time / 60);
+                let seconds = time % 60;
+
+                countdownEl.textContent =
+                    ` ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+                time--;
+
+                if (time < 0) {
+                    clearInterval(timer);
+                }
+            }, 1000);
+        }
+        startTimer();
+            function resetTimer() {
+        clearTimeout(timeInput);
+      
+        resetTimer();
+    }
+    </script>
+</body>
+
+</html>

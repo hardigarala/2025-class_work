@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Array Methods tasks </h2>
+    <script>
+
+        //         <!-- Basic Array Methods
+        //             1. Create an array of 5 fruits.
+        arr = ["mango", "banana", "grapes", "watermelon", "kiwi"];
+        document.writeln(arr + "<br>");
+
+
+
+        //             2. Add 'Mango' to the end of the array.
+        // arr1=push.(cherry);
+        arr.push("cherry");
+        document.writeln(arr + "<br>");
+
+        //             3. Add 'Strawberry' to the beginning.
+        arr.unshift("Strawberry");
+        document.writeln(arr + "<br>");
+
+        //             4. Remove the last element.
+        arr.pop();
+        document.writeln(arr + "<br>");
+
+        //             5. Remove the first element.
+        arr.shift();
+        document.writeln(arr + "<br>");
+
+        // 6. Check if 'Apple' is in the array.
+
+        document.writeln(arr.includes("apple") + "<br>");
+        // 7. Find the index of 'Banana'.
+        document.writeln(arr.indexOf("banana") + "<br>");
+
+        // 8. Replace the second element with 'Peach'.
+        arr.splice(2, 0, "Peach");
+        document.writeln(arr + "<br>");
+        // 9. Get the length of the array.
+        // arr.length();
+        document.writeln(arr.length + "<br>");
+
+        // 10. Convert the array to a string. -->
+        // arr.tostring();
+        document.writeln(arr.tostring + "<br>");
+        // 1. Create an array of numbers and double each using map()
+        let arr1 = [11, 22, 33, 44, 55];
+        let newArray = arr1.map(doubleFunction);
+        document.writeln(newArray + "<br>");
+        function doubleFunction(num) {
+            return num * 2;
+        }
+        // let arr2 = arr1.map(arr1=> arr1*2);
+        // console.log(double);
+
+
+
+        // 2. Filter out odd numbers from an array using filter()
+        let oddnum = [1, 2, 3, 4, 5, 6];
+        let oddnew = oddnum.filter(oddFind);
+        document.writeln(oddnew + "<br>");
+        function oddFind(num) {
+            return num % 2 === 1;
+        }
+
+        // 3Sum all numbers in an array using reduce()
+
+        // 4. Log each element of an array using forEach()
+        let arreach = [11, 12, 13, 14, 15];
+        // let newarrEach= arreach.forEach(arrEachfunction);
+        // function arrEachfunction( arrFunction,index) {
+        //     console.log( "inedx "+index+"value"+ arrFunction);
+
+        // }
+        arreach.forEach((arrFunction, index) => {
+            document.write("index of element" + index + " value of elements " + arrFunction + "<br>");
+
+        });
+        //  array.forEach(callback(element, index, arr), thisValue);
+        //  arreach.forEach(( arrFunction,x ,y)=>{
+        //     console.log("index of element "+x+" value of elements "+arrFunction + " "+y);
+        //  });
+
+        // 5. Find the first number greater than 50 using find()
+        // array.find(function(currentValue, index, arr), thisValue)
+
+        let arrFind = [30, 40, 55, 33, 60, 80];
+        let arrNew = arrFind.find(function (found) {
+            return found > 50;
+        });
+        document.writeln("Find the first number greater than 50 using find()" + " arrFind=[30,40,55,33,60,80];" + "<br>");
+        document.write("first number greater than 50 =" + arrNew + "<br>");
+
+        // 6Check if all elements are positive using every()
+        // let foundPositive=[22,44,55,66,7,88];
+        // let findnum=foundPositive.every(function(find){
+        //     return find>0;
+        // });
+        // document.writeln(" number is positive or negative " +findnum +"<br>");
+        let foundPositive = [22, 44, 55, -66, 7, 88];
+        let positive = (positiveNum) => positiveNum > 0;
+        document.writeln(foundPositive.every(positive) + "<br>");
+        // 7Check if any number is divisible by 10 using some()
+        let arr3 = [1, 2, 3, 5, 6, 2];
+        let divide = (arrnumb) => arrnumb % 10 == 0;
+        document.write(arr3.some(divide) + "<br>");
+
+        // 8Sort an array of numbers in ascending order using sort()
+        let sortNum = [12, 2, 33, 45, 89, 20];
+        let newSorted = sortNum.toSorted((a, b) => a - b);
+        document.write(newSorted + "<br>");
+        // 9Flatten a nested array one level using flat()
+        let arrFlat = [11, 12, 13, [14, 115], [44, 99, 88, 90]];
+        document.writeln(arrFlat.flat() + "<br>");
+
+        // 10Find the index of a specific value using indexOf()
+        let arrIndex = ["hello", "good", "morning", "bad", "evening"];
+        document.writeln("evening is indexof: " + arrIndex.indexOf("evening") + "<br>");
+
+        // 11Reverse an array using reverse()
+
+        document.writeln("this is the real array:" + "<br>" + arrIndex + "<br>")
+        document.writeln("this is the reverse array:" + "<br>" + arrIndex.reverse() + "<br>")
+        // 12Remove the last element using pop()
+        arrIndex.pop();
+        document.writeln(arrIndex + "<br>");
+        // 13Add an element at the end using push()
+        arrIndex.push("dharti");
+        document.writeln(arrIndex + "<br>");
+        // 14Remove the first element using shift()
+        arrIndex.shift();
+        document.writeln(arrIndex + "<br>");
+
+        // 15Add an element at the start using unshift()
+        arrIndex.unshift("rajkot");
+        document.writeln(arrIndex + "<br>");
+
+        // 16Join an array into a string using join()
+        let newarrJoin = arrIndex.join();
+        document.writeln(newarrJoin + "<br>");
+        // 17Split a string into an array using split()
+        // let arrSplit=["how are you guys what are you doing..?"];
+        // // let newSplit= ;
+        // document.writeln(arrSplit.split(" "));
+        let text = "How are you doing today?";
+        let arrSplit = text.split(" ");
+        document.writeln(arrSplit + "<br>");
+
+        // 18. Slice a sub-array from index 2 to 5 using slice()
+        let newSlice = arrIndex.slice(2, 6);
+        document.writeln(newSlice);
+
+
+        // 19. Modify elements from index 1 using splice()
+        
+        // 20. Find if an array includes a specific value using includes()
+        // 21. Fill array with a value from index 2 to 4 using fill()
+        // 22. Copy part of array using copyWithin()
+        // 23Convert array-like object to array using Array.from()
+        // 24Convert string of numbers to array and sort numerically
+        // 25Count frequency of elements using reduce()
+        // 26Convert an array of strings to uppercase using map()
+        // 27Remove duplicates using filter() and indexOf()
+        // 28Combine two arrays using concat()
+        // 29Flatten deeply nested array using flat(Infinity)
+        // 30Chain map() and filter() to transform and filter data
+        // 31Get unique elements using Set and spread syntax
+        // 32Replace all elements with their squares using map()
+        // 33Find longest word in an array using reduce()
+        // 34Filter strings with length > 3
+        // 35Find common elements between two arrays
+        // 36Count vowels in an array of characters
+        // 37Remove falsy values using filter()
+        // 38Extract values from array of objects using map()
+        // 39Sort array of objects by key (e.g., age)
+        // 40Find average value in array using reduce()
+        // 41Check if array is sorted
+        // 42Chunk array into groups of 3 elements
+        // 43Rotate array elements left or right
+        // 44Group items by property using reduce()
+        // 45Create a range array from 1 to 100
+        // 46Reverse words in a sentence using split(), reverse(), join()
+        // 47Remove undefined or null using filter()
+        // 48Count number of even and odd numbers
+        // 49Use Array.isArray() to check a variable
+        // 50Convert a nested object into an array of key-value pairs
+        // 51Deep clone an array using JSON.parse(JSON.stringify(...))
+        // 52Merge arrays and remove duplicates
+
+    </script>
+</body>
+
+</html>

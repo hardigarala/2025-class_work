@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements</title>
+</head>
+
+<body>
+    <script>
+        // 1. Check if number is positive or negative
+        let num = 22;
+        if (num > 0){
+             console.log("Positive");}
+        else{
+            console.log("Negative");}
+        // else {
+        //     console.log("Zero");}
+
+        // 2. Even or Odd Checker
+        let n = 4;
+        if (n % 2 === 0){
+             console.log("Even");}
+
+        else{
+             console.log("Odd");}
+
+        // 3. Find largest of two numbers
+        let a = 10, b = 20;
+        if (a > b){
+             console.log("A is larger");}
+        else if (b > a) {
+            console.log("B is larger");}
+        else {console.log("Both are equal");}
+
+        // 4. Check if divisible by 5
+        let d = 22;
+        if (d % 5 === 0) {
+            console.log("Divisible by 5");}
+        else{
+             console.log("Not divisible by 5");}
+
+        // 5. Check if year is Leap Year
+        // let year = 2024;
+        // if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)){
+        //     console.log("Leap Year");}
+        // else{
+        //      console.log("Not a Leap Year");}
+
+        // 6. Voting Eligibility
+        let age = 18;
+        if (age >= 18) {
+            console.log("Eligible to vote");}
+        else {
+            console.log("Not eligible");}
+
+        // 7. Grade Calculator
+        let marks = 85;
+        if (marks >= 90) {
+            console.log("Grade A");}
+        else if (marks >= 75){ 
+            console.log("Grade B");}
+        else if (marks >= 60) {
+            console.log("Grade C");}
+        else{
+             console.log("Grade F");}
+
+        // 8. Temperature Checker
+        let temp = 35;
+        if (temp > 30) {
+            console.log("Hot");}
+        else if (temp >= 15) {
+            console.log("Warm");}
+        else {
+            console.log("Cold");}
+
+        // 9. Check vowel or consonant
+        let char = 'e';
+        char = char.toLowerCase();
+        if ('aeiou'.includes(char)) console.log("Vowel");
+        else console.log("Consonant");
+
+        // 10. Simple Calculator using if-else
+        let x = 10, y = 5, cal = '/';
+        if (cal === '+') { console.log(x + y); }
+        else if (cal === '-') { console.log(x - y); }
+
+        else if (cal === '*') { console.log(x * y); }
+        else if (cal === '/') { console.log(x / y); }
+        else { console.log("Invalid operator"); }
+
+        // 11. Find largest of three numbers
+        let aa= 10, bb = 20, cc = 15;
+        if (aa >= bb && aa >= cc) {
+            console.log("A is largest");}
+        else if (bb >= aa && bb >= cc) {
+            console.log("B is largest");}
+        else{
+             console.log("C is largest");}
+
+
+        // 12. Number Range Checker (1-100)
+        let checkNum = 50;
+        if (checkNum >= 1 && checkNum <= 100){
+            console.log("In range");}
+        else{ 
+            console.log("Out of range");}
+
+        // 13. Day of the week using switch
+        let day = 3;
+        switch (day) {
+            case 1:
+                 console.log("Monday"); break;
+            case 2:
+                 console.log("Tuesday"); break;
+            case 3: 
+                console.log("Wednesday"); break;
+            case 4:
+                 console.log("Thursday"); break;
+            case 5:
+                 console.log("Friday"); break;
+            case 6: 
+                console.log("Saturday"); break;
+            case 7:
+                 console.log("Sunday"); break;
+            default:
+                 console.log("Invalid day");
+        }
+
+        // 14. Check multiple of 3 and 5 (FizzBuzz)
+        let fizzNum = 15;
+        if (fizzNum % 3 === 0 && fizzNum % 5 === 0) {
+            console.log("FizzBuzz");}
+        else if (fizzNum % 3 === 0){
+             console.log("Fizz");}
+        else if (fizzNum % 5 === 0){
+             console.log("Buzz");}
+        else{
+             console.log(fizzNum);}
+
+        // 15. Student Pass or Fail
+        let score = 45;
+        if (score >= 50){
+             console.log("Pass");}
+        else{
+             console.log("Fail");}
+
+        // 16. Uppercase or Lowercase
+        let letter = 'A';
+        if (letter === letter.toUpperCase()){
+             console.log("Uppercase");}
+        else{
+             console.log("Lowercase");}
+
+        // 17. Calculate Bonus Based on Salary
+        // let salary = 20000;
+        // let bonus = 0;
+        // if (salary > 30000) bonus = salary * 0.10;
+        // else bonus = salary * 0.05;
+        // console.log("Bonus is:", bonus);
+
+        // 18. Traffic Light Simulation
+        let signal = "Red";
+        if (signal === "Red") {
+            console.log("Stop");
+        }
+        else if (signal === "Yellow") {
+             console.log("Wait"); }
+        else if (signal === "Green") { 
+            console.log("Go"); }
+        else {
+             console.log("Invalid signal"); }
+
+        // 19. Odd/Even using switch
+        let evenNum = 9;
+        switch (evenNum % 2) {
+            case 0: console.log("Even"); break;
+            case 1: console.log("Odd"); break;
+        }
+
+        // 20. Check Password Strength
+
+
+
+
+    </script>
+</body>
+
+</html>

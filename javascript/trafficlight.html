@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Real Traffic Signal</title>
+  <style>
+    body {
+      background-color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .traffic-signal {
+      width: 120px;
+      background-color: #111;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 15px #000;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .light {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color: #444;
+      transition: background-color 0.3s;
+      box-shadow: inset 0 0 10px #000;
+    }
+
+    .on.red {
+      background-color: red;
+    }
+
+    .on.yellow {
+      background-color: yellow;
+    }
+
+    .on.green {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="traffic-signal">
+    <div id="red" class="light red"></div>
+    <div id="yellow" class="light yellow"></div>
+    <div id="green" class="light green"></div>
+  </div>
+
+  <script>
+    const red = document.getElementById('red');
+    const yellow = document.getElementById('yellow');
+    const green = document.getElementById('green');
+
+    function turnOffAll() {
+      red.classList.remove('on');
+      yellow.classList.remove('on');
+      green.classList.remove('on');
+    }
+
+    function startTrafficSignal() {
+      turnOffAll();
+      red.classList.add('on');
+      setTimeout(() => {
+        turnOffAll();
+        yellow.classList.add('on');
+        setTimeout(() => {
+          turnOffAll();
+          green.classList.add('on');
+          setTimeout(() => {
+            startTrafficSignal(); // restart the cycle
+          }, 3000); // green duration
+        }, 1000); // yellow duration
+      }, 3000); // red duration
+    }
+
+    startTrafficSignal();
+  </script>
+
+</body>
+</html>

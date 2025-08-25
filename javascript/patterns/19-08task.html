@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19-08</title>
+</head>
+
+<body>
+    <!-- -----------------------------------------part-01------------------------------------------------------ -->
+    <ul>part-01
+
+        <li>Declare a variable myName and assign your name as a string. Print it.</li>
+        <li>Create two number variables num1 and num2. Print their sum, difference, product, and quotient.</li>
+        <li>Declare a boolean variable isLoggedIn. Print “User is logged in” if true, else “User is logged out.”</li>
+        <li>Use typeof to check the type of "Hello", 42, true, [1,2,3], and {name: "John"}.</li>
+        <li>Create a constant variable PI with value 3.14159 and print it. Try reassigning it – what happens?</li>
+        </li>
+    </ul><br>
+    <br>
+    <!-- --------------------------------------part-01------------------------------------------------------------ -->
+    <!-- --------------------------------------part-02------------------------------------------------------------ -->
+    <ul> part-02
+        <li>Create an array fruits with 3 fruits. Add one more fruit and print the updated array. </li>
+        <li> the last item from fruits and print the array again.</li>
+        <li>Create an object car with properties: brand, model, and year. Print each property separately.</li>
+        <li>Update the year of the car object and print the updated object.</li>
+        <li>Create an object book with properties title, author, and pages. Add a new property publishedYear later and
+            print the object.
+        </li>
+    </ul><br><br>
+    <!-- --------------------------------------part-02------------------------------------------------------------ -->
+    <!-- --------------------------------------part-03------------------------------------------------------------ -->
+    <ul>part-03
+        <li>
+            Create variables firstName and lastName as strings. Combine them into a full name using template literals.
+        </li>
+        <li>Declare an array marks = [85, 90, 78, 92]. Find the average marks.</li>
+        <li>Create an object student with properties: name, age, subjects (array). Add a new subject into subjects.</li>
+        <li>Write a function calculateArea(radius) that uses a variable PI = 3.14 and returns the area of a circle.</li>
+        <li>Create a variable user as an object with username, email, and isAdmin. Print a message:
+            If isAdmin is true → “Welcome Admin, [username]”
+            Else → “Welcome User, [username]”
+
+        </li>
+    </ul>
+    <!-- --------------------------------------part-03------------------------------------------------------------ -->
+
+    <script>
+        // 1. Declare a variable myName and assign your name
+        let myName = "Hardi";
+        console.log("My name is:", myName);
+
+        // 2. Create two number variables and print sum, difference, product, quotient
+        let num1 = 10;
+        let num2 = 5;
+
+        console.log("Sum:", num1 + num2);
+        console.log("Difference:", num1 - num2);
+        console.log("Product:", num1 * num2);
+        console.log("Quotient:", num1 / num2);
+
+        // 3. Boolean variable with if-else
+        let isLoggedIn = true;
+        if (isLoggedIn) {
+            console.log("User is logged in");
+        } else {
+            console.log("User is logged out");
+        }
+
+        // 4. Constant variable PI
+        const PI = 3.14159;
+        console.log("PI value:", PI);
+
+        // Trying to reassign PI → will cause an error
+        // PI = 3.14; //  TypeError: Assignment to constant variable.
+
+        // 5. typeof checks
+        console.log(typeof "Hello");      
+        console.log(typeof 42);           
+        console.log(typeof true);         
+        console.log(typeof [1, 2, 3]);    
+        console.log(typeof { name: "hardi" }); 
+        // -----------------------------------------------------------------------------------------------
+
+
+
+        // 1. Create an array with 3 fruits
+        let fruits = ["Apple", "Banana", "Mango"];
+        console.log("simple array:", fruits);
+
+        // Add one more fruit
+        fruits.push("Orange");
+        console.log("After adding a fruit:", fruits);
+
+        // Remove the last fruit
+        fruits.pop();
+        console.log("After removing last fruit:", fruits);
+
+        // 2. Create a car object
+        let car = {
+            brand: "Toyota",
+            model: "Corolla",
+            year: 2020
+        };
+
+        // Print each property separately
+        console.log("Car Brand:", car.brand);
+        console.log("Car Model:", car.model);
+        console.log("Car Year:", car.year);
+
+        // Update the year
+        car.year = 2024;
+        console.log("Updated Car Object:", car);
+
+        // 3. Create a book object
+        let book = {
+            title: "2 States",
+            author: "Chetan Bhagat",
+            pages: 268,
+            language: "English"
+        };
+
+        // Add new property publishedYear later
+        book.publishedYear = 2009;
+        console.log("Book Object:", book);
+        // --------------------------------------------------------------------------------------------------------------
+        // 1. Combine firstName and lastName using template literals
+        let firstName = "Hardi";
+        let lastName = "Patel";
+        let fullName = `${firstName} ${lastName}`;
+        console.log("Full Name:", fullName);
+
+        // 2. Find average marks
+        let marks = [85, 90, 78, 92];
+        let total = marks.reduce((sum, mark) => sum + mark, 0);
+        let average = total / marks.length;
+        console.log("Average Marks:", average);
+
+        // 3. Student object
+        let student = {
+            name: "hardi",
+            age: 20,
+            subjects: ["Math", "Science", "English"]
+        };
+
+        // Add a new subject
+        student.subjects.push("Computer Science");
+        console.log("Updated Student Object:", student);
+
+        // 4. Function to calculate area of circle
+        function calculateArea(radius) {
+            const PI = 3.14;
+            return PI * radius * radius;
+        }
+        console.log("Area of Circle (r=5):", calculateArea(5));
+
+        // 5. User object with conditional message
+        let user = {
+            username: "hardi123",
+            email: "hardi@example.com",
+            isAdmin: true
+        };
+
+        if (user.isAdmin) {
+            console.log(`Welcome Admin, ${user.username}`);
+        } else {
+            console.log(`Welcome User, ${user.username}`);
+        }
+
+
+    </script>
+</body>
+
+</html>

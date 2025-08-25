@@ -1,0 +1,58 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Driving Eligibility</h1>
+        <input type="text" id="name" placeholder="Enter your name">
+        <input type="number" id="birthYear" placeholder="Enter your birth year">
+        <button onclick="checkEligibility()">Check Eligibility</button>
+        <div id="eligibilityResult" class="result"></div>
+    </div>
+
+</body>
+
+</html> -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving Eligibility </title>
+</head>
+
+<body>
+
+    <!-- <input type="text" id="name" placeholder="Enter your name"> -->
+    <!-- <input type="number" id="birthYear" placeholder="Enter your birth year"> -->
+    <script>
+
+        let input = prompt("Enter your born year")
+        let age = 2025 - input;
+        console.log(age)
+        if (input === '') {
+            alert("please enter your born year");
+        }
+        else {
+            if (age > 18) {
+                document.write("you are eligiable to drive")
+            }
+            else {
+                document.write("you are not eligiable ")
+            }
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

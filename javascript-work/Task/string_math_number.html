@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Method Tasks</title>
+</head>
+
+<body>
+    <script>
+        var str = "hardi";
+        // let reversed = str.split("").reverse().join("");
+        var reversed = str.split("").reverse();
+        console.log(str);
+
+        console.log(reversed);
+        // document.write(str);
+        // document.write(reversed);
+        // Check if a given string is a palindrome.
+
+
+
+
+
+
+
+        // Convert the first letter of each word in a string to uppercase.
+        var uppercase = str.toUpperCase();
+        console.log(uppercase);
+        // Extract the first 5 characters from a string.
+        var str = "JavaScript";
+        var firstFive = str.substring(0, 5);
+        console.log(firstFive);
+        // Find the longest word in a sentence.
+       
+
+
+
+
+        // Replace the word "bad" with "good" in a given sentence.
+        var str = "this is the frameboxx";
+        var replaced = str.replace("frameboxx", "junagadh");
+        console.log(replaced);
+
+
+
+        // Remove extra spaces from a string.
+        var str = "   Hello        world!  ";
+
+        console.log(str.trim());
+        // const hr=[1,2,3,4,5];
+        // hr.splice(2,3,'a');
+        // console.log(hr);
+        // console.log(5<8>2);
+            let str7='aa bb dd ee ww';
+             str7=str7.split(" ");
+            //let denish =arr.join();
+            console.log(str7);
+            let str10 = "PB 10 CV 2662";
+        str = str10.split(" "); //[ 'PB', '10', 'CV', '2662' ]
+        // str = str.join("") // 'PB10CV2662'
+        console.log(str);
+            
+
+
+
+      console.log("3" +"3" -"3");
+
+
+
+
+        // <li>Generate a random number between 1 and 100.</li>
+        let randomNum = Math.floor(Math.random() * 100) + 1;
+        console.log(randomNum);
+
+
+        //         <li>Round a decimal number to the nearest integer.</li>
+        let num = 4.7;
+        let rounded = Math.round(num);
+        console.log(rounded); // 5
+
+        // <li>Find the square root of a given number.</li>
+        let number = 25;
+        let sqrt = Math.sqrt(number);
+        console.log(sqrt); // 4
+
+
+        //<li>Get the absolute value of a negative number.</li>
+        let A= -25;
+        let absolute = Math.abs(A);
+        console.log(absolute);
+
+        //<li>Find the maximum and minimum values from a set of numbers.</li>
+        let maxVal = Math.max(10, 5, 8, 20);
+        let minVal = Math.min(10, 5, 8, 20);
+        console.log(maxVal);
+        console.log(minVal);
+
+        //<li>Calculate 2 raised to the power of 5.</li>
+        let power = Math.pow(2, 5);
+        console.log(power);
+
+        //<li>Generate a random integer between 50 and 150.</li>
+        let randomInt = Math.floor(Math.random() * (150 - 50 + 1)) + 50;
+        console.log(randomInt);
+
+        //<li>Get the floor value of 9.7.</li>
+        let floorValue = Math.floor(9.7);
+        console.log(floorValue); // 9
+
+        //<li>Get the ceiling value of 4.3.</li>
+        let ceilValue = Math.ceil(4.3);
+        console.log(ceilValue); // 5
+
+        //<li>Find the remainder when 25 is divided by 4.</li>
+        let remainder = 25 % 4;
+        console.log(remainder); // 1
+
+
+
+        // <li>Convert the string "123" into a number.</li>
+        let num4 = Number("123");
+        console.log(num4); // 123
+        console.log(typeof num4);
+
+
+        //<li>Convert the number 456 into a string.</li>
+        let str4 = String(456);
+        console.log(str4); // "456"
+        console.log(typeof str4);
+
+        //<li>Convert the decimal number 9.8765 to 2 decimal places.</li>
+        let decimal = 9.8765;
+        let twoDecimals = decimal.toFixed(2);
+        console.log(twoDecimals); // "9.88"
+
+        //<li>Check if the value "50" is an integer.</li>
+        let isInteger = Number.isInteger(Number("50"));
+        console.log(isInteger); // true
+
+        //<li>Convert the number 255 to its hexadecimal form.</li>
+        let hex = (266).toString(16);
+        console.log(hex); // "10a"
+
+        //<li>Convert 0.1 + 0.2 to a fixed decimal format with 1 decimal place.</li>
+        let sum = (0.1 + 0.2).toFixed(1);
+        console.log(sum); // "0.3"
+
+        //<li>Find if "hello" is a valid number or not.</li>
+        let isValidNumber = !isNaN("hello");
+        console.log(isValidNumber); // false
+
+        //<li>Convert the number 1e6 into a regular number format.</li>
+        let normalNum = 1e6;
+        console.log(normalNum); // 1000000
+
+        //<li>Parse the string "45.67px" and extract the numeric value.</li>
+        let value = parseFloat("45.67px");
+        console.log(value); // 45.67
+
+        //<li>Convert the binary number "1101" into a decimal number.</li>
+        let decimalnum = parseInt("1101", 2);
+        console.log(decimalnum); // 13
+
+
+
+    </script>
+
+</body>
+
+</html>
